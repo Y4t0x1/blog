@@ -2,6 +2,10 @@
 - title: Home
   url: /
   icon: home
+- title: Portfolio
+  url: "https://y4t0x1.github.io/"
+  icon: terminal
+  external: true
 - title: Categories
   url: /categories/
   icon: folder

@@ -15,10 +15,18 @@
         {%- if page.url == item.url -%}{%- assign active = true -%}{%- endif -%}
         {%- if item.url == "/" and page.collection == "writeups" -%}{%- assign active = true -%}{%- endif %}
         <li>
+          {%- if item.external %}
+          <a href="{{ item.url }}" class="nav-link" title="Visit {{ item.title }}">
+            {% include icon.html name=item.icon %}
+            <span>{{ item.title }}</span>
+            {% include icon.html name="external" class="icon-subtle" %}
+          </a>
+          {%- else %}
           <a href="{{ item.url | relative_url }}" class="nav-link{% if active %} is-active{% endif %}"{% if active %} aria-current="page"{% endif %}>
             {% include icon.html name=item.icon %}
             <span>{{ item.title }}</span>
           </a>
+          {%- endif %}
         </li>
         {%- endfor %}
       </ul>

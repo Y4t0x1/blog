@@ -9,12 +9,11 @@ description: >-
   Hands-on CTF writeups, lab walkthroughs and security research notes by
   Y4t0x1 — web exploitation, forensics, crypto, reversing and privilege escalation.
 
-# Full site URL (no trailing slash). For a user site this is https://<username>.github.io
+# Full site URL (no trailing slash).
 url: "https://y4t0x1.github.io"
-# Leave empty for a user site (repo named <username>.github.io).
-# For a project site (repo named e.g. "writeups") use "/writeups".
-# NOTE: the GitHub Actions workflow overrides this automatically at build time.
-baseurl: ""
+# Hosted under /blog on GitHub Pages.
+baseurl: "/blog"
+portfolio_url: "https://y4t0x1.github.io"
 
 lang: en
 timezone: Europe/Istanbul
