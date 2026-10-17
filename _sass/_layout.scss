@@ -279,6 +279,42 @@ main:focus { outline: none; }
   .search-cancel { display: block; }
 }
 
+.topbar-portfolio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  height: 40px;
+  padding: 0 0.85rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text-strong);
+  font-size: 0.86rem;
+  font-weight: 600;
+  white-space: nowrap;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: border-color var(--t-fast), background-color var(--t-fast), color var(--t-fast), transform var(--t-fast);
+
+  &:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--surface-2);
+    transform: translateY(-1px);
+  }
+
+  .topbar-portfolio-icon {
+    width: 12px;
+    height: 12px;
+    color: var(--accent);
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 0.65rem;
+    font-size: 0.8rem;
+  }
+}
+
 .search-results {
   position: absolute;
   top: calc(100% + 8px);

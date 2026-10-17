@@ -6,11 +6,10 @@
 
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <ol role="list">
-        <li><a href="{{ site.portfolio_url | default: 'https://y4t0x1.github.io' }}" title="Return to Portfolio">Portfolio</a></li>
         {%- if page.url == "/" %}
-        <li aria-current="page">Blog</li>
+        <li aria-current="page">Home</li>
         {%- else %}
-        <li><a href="{{ '/' | relative_url }}">Blog</a></li>
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
         {%- if page.collection == "writeups" %}
         <li><a href="{{ '/#writeups' | relative_url }}">Writeups</a></li>
         {%- endif %}
@@ -37,5 +36,10 @@
     <button type="button" id="search-trigger" class="icon-btn topbar-search-btn" aria-label="Open search">
       {% include icon.html name="search" %}
     </button>
+
+    <a href="{{ site.portfolio_url | default: 'https://y4t0x1.github.io' }}" class="topbar-portfolio-btn" title="Return to Portfolio">
+      <span>Portfolio</span>
+      {% include icon.html name="external" class="topbar-portfolio-icon" %}
+    </a>
   </div>
 </header>
