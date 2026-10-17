@@ -310,8 +310,16 @@ main:focus { outline: none; }
   }
 
   @media (max-width: 640px) {
-    padding: 0 0.65rem;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: inline-grid;
+    place-items: center;
     span { display: none; }
+    .topbar-portfolio-icon {
+      width: 16px;
+      height: 16px;
+    }
   }
 }
 
@@ -474,5 +482,11 @@ main:focus { outline: none; }
   .panel {
     display: block;
     align-self: stretch;
+  }
+}
+
+@media (min-width: 1600px) {
+  :root {
+    --content-max: 1380px;
   }
 }

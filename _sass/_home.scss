@@ -362,4 +362,5 @@
 
 @media (max-width: 479px) {
   .terminal { display: none; }
+  .toolbar-row { grid-template-columns: 1fr; }
 }
