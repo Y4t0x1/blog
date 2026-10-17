@@ -442,10 +442,11 @@ main:focus { outline: none; }
   .topbar-inner { padding: 0 1.5rem; }
   .topbar-title { display: none; }
   .breadcrumb { display: block; flex: 1; min-width: 0; }
+  .topbar-portfolio-btn { margin-left: auto; }
   .search {
     display: flex;
     width: 280px;
-    margin-left: auto;
+    margin-left: 0;
     transition: width var(--t);
     &:focus-within { width: 360px; }
   }

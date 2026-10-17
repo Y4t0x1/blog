@@ -20,6 +20,11 @@
 
     <span class="topbar-title">{% if page.collection == "writeups" %}Writeup{% elsif page.url == "/" %}{{ site.title }}{% else %}{{ page.title }}{% endif %}</span>
 
+    <a href="{{ site.portfolio_url | default: 'https://y4t0x1.github.io' }}" class="topbar-portfolio-btn" title="Return to Portfolio">
+      <span>Portfolio</span>
+      {% include icon.html name="external" class="topbar-portfolio-icon" %}
+    </a>
+
     <div class="search" id="search" role="search">
       <label for="search-input" class="visually-hidden">Search all writeups</label>
       <span class="search-icon">{% include icon.html name="search" %}</span>
@@ -36,10 +41,5 @@
     <button type="button" id="search-trigger" class="icon-btn topbar-search-btn" aria-label="Open search">
       {% include icon.html name="search" %}
     </button>
-
-    <a href="{{ site.portfolio_url | default: 'https://y4t0x1.github.io' }}" class="topbar-portfolio-btn" title="Return to Portfolio">
-      <span>Portfolio</span>
-      {% include icon.html name="external" class="topbar-portfolio-icon" %}
-    </a>
   </div>
 </header>
